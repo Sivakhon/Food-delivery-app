@@ -1,3 +1,13 @@
+@keyframes pop-in {
+    0% { opacity: 0; transform: scale(0.1); }
+    100% { opacity: 1; transform: scale(1); }
+}
+
+@keyframes pop-out {
+    0% { opacity: 1; transform: scale(1); }
+    100% { opacity: 0; transform: scale(0.1); }
+}
+
 .food-item{
     width: 100%;
     margin: auto;
@@ -44,3 +54,37 @@
     font-weight: 500;
     margin: 10px 0px;
 }
+
+.food-item-img-container{
+    position: relative;
+}
+.food-item-img-container .add{
+    width: 35px;
+    position: absolute;
+    bottom: 15px;
+    right: 15px;
+    cursor: pointer;
+    border-radius: 50%;
+    transition: width 0.2s;
+    animation: pop-in 0.5s ;
+
+    &:hover{
+        width: 40px;
+    }
+}
+
+.food-item-counter{
+    position: absolute;
+    bottom: 15px;
+    right: 15px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 6px;
+    border-radius: 50px;
+    background: white;
+    box-shadow: 0 0 3px tomato;
+    transition: all 0.3s ease;
+    animation: pop-in 0.5s;
+}
+
