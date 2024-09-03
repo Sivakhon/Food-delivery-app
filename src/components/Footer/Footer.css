@@ -32,6 +32,10 @@
     h2{
         color: white;
     }
+
+    img{
+        width: 200px;
+    }
 }
 
 .footer-social-icons img{
