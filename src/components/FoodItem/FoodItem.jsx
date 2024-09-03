@@ -5,7 +5,7 @@ import { StoreContext } from '../../context/StoreContext'
 
 const FoodItem = ({id,name,image,price,description,category}) => {
   
-  const [itemCount,setItemCount] = useState(0)
+  // const [itemCount,setItemCount] = useState(0)
   const {cartItems,addToCart,removeFromCart} = useContext(StoreContext);
   
   return (
