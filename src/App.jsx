@@ -6,7 +6,7 @@ import Cart from './pages/Cart/Cart'
 import PlaceOrder from './pages/PlaceOrder/PlaceOrder'
 import Footer from './components/Footer/Footer'
 import LoginPopup from './components/LoginPopup/LoginPopup'
-
+import './App.css'
 const App = () => {
 
   const [showLogin,setShowLogin] = useState(false)
@@ -14,6 +14,7 @@ const App = () => {
   return (
     <>
     {showLogin?<LoginPopup setShowLogin={setShowLogin} />:<></>}
+    <div className="App">
       <div className='app'>
         <Navbar setShowLogin = {setShowLogin}/>
         <Routes>
@@ -23,6 +24,7 @@ const App = () => {
         </Routes>
       </div>
       <Footer />
+      </div>
     </>
 
   )
